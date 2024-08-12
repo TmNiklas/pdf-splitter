@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Splitter</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+        }
+        .card {
+            width: 100%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card bg-base-200 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title">PDF Splitter</h2>
+            <form action="split_pdf.php" method="post" enctype="multipart/form-data">
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text">Upload your PDF</span>
+                    </label>
+                    <input type="file" name="pdf" class="input input-bordered" required>
+                </div>
+                <div class="form-control mt-4">
+                    <button type="submit" class="btn btn-primary">Split PDF</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
